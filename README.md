@@ -11,20 +11,7 @@ I'm writing this as I'm beginning this project (hopefully I complete it ;D) here
 2. Accretion disk : simulate accreciate disk using the ray tracing + the halos
 
 3. Spacetime curvature : demonstrate visually the "trapdoor in spacetime" that is black holes using spacetime grid
-
-4. [optional] try to make it run realtime ;D
-
-I hope it works :/
-
-## **Building Requirements:**
-
-1. C++ Compiler supporting C++ 17 or newer
-
-2. [Cmake](https://cmake.org/)
-
-3. [Vcpkg](https://vcpkg.io/en/)
-
-4. [Git](https://git-scm.com/)
+   
 
 ## **Build Instructions:**
 
@@ -57,13 +44,5 @@ sudo apt install build-essential cmake \
 	libglew-dev libglfw3-dev libglm-dev libgl1-mesa-dev
 ```
 
-This provides the GLEW, GLFW, GLM and OpenGL development files so `find_package(...)` calls in `CMakeLists.txt` can locate the libraries. After installing, run the `cmake -B build -S .` and `cmake --build build` commands as shown in the Build Instructions.
-
-## **How the code works:**
-for 2D: simple, just run 2D_lensing.cpp with the nessesary dependencies installed.
-
-for 3D: black_hole.cpp and geodesic.comp work together to run the simuation faster using GPU, essentially it sends over a UBO and geodesic.comp runs heavy calculations using that data.
-
-should work with nessesary dependencies installed, however I have only run it on windows with my GPU so am not sure!
-
-LMK if you would like an in-depth explanation of how the code works aswell :)
+Run the `cmake -B build -S .` and `cmake --build build` commands as shown in the Build Instructions.
+Run then after build `./build/BlackHole2D` for 2D simulation and `./build/BlackHole3D` for 3D simulation
